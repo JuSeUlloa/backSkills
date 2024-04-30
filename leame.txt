@@ -1,0 +1,95 @@
+# **************************************************************************
+# Creacion del package.json
+npm init
+# **************************************************************************
+
+
+# **************************************************************************
+# Instalacion de paquetes
+
+npm i cors
+npm i morgan
+npm i express
+npm i mongoose
+
+npm i dotenv --save-dev
+npm i nodemon --save-dev
+npm i @types/cors  --save-dev
+npm i @types/morgan --save-dev
+npm i @types/express --save-dev
+npm i @types/mongoose --save-dev
+# **************************************************************************
+
+
+# **************************************************************************
+- crear archivo tsconfig.json
+
+tsc --init
+# **************************************************************************
+
+
+# **************************************************************************
+# configurar tsconfig.json
+
+"module": "commonjs",
+"outDir": "./build",
+"resolveJsonModule": true,
+# **************************************************************************
+
+
+# **************************************************************************
+# incluir en la seccion de Scrips en el package.json  
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon build/index.js",
+    "build": "tsc -w"
+  },
+# **************************************************************************
+
+
+# **************************************************************************
+# incluir la extensión en VSCODE Dotenv Official + Vault
+
+https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode
+# **************************************************************************
+
+
+# **************************************************************************
+# Crear la estructura de carpetas
+
+
+md src
+
+md src/app
+md src/doc
+md src/config
+md src/middleware
+
+md src/config/api
+md src/config/domain
+md src/config/utilities
+md src/config/connexion
+
+md src/app/bills
+md src/app/category
+md src/app/models
+md src/app/schemas
+
+
+md src/app/bills/controller
+md src/app/bills/dao
+md src/app/bills/route
+
+md src/app/category/controller
+md src/app/category/dao
+md src/app/category/route
+
+# **************************************************************************
+# Crear el archivo .env en la raiz del proyecto
+# Copiar el siguiente contenido: 
+
+PORT=3200
+URL_MONGO="mongodb://drenvio:<password>@ac-aemgtkt-shard-00-00.unqyghm.mongodb.net:27 017,ac-aemgtkt-shard-00-01.unqyghm.mongodb.net:27017,ac-aemgtkt-shard-00-02.unqyghm.mongodb.net:27017/?replicaSet=atlas-y8oxsk-shard-0&ssl=true&authSource=admin"
+# **************************************************************************
+

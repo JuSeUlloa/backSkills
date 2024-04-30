@@ -1,0 +1,6 @@
+**/node_modules
+**/package-lock.json
+**/database/Modelo_PC.pdb
+**/database/Modelo_PC.pdm
+**/build
+backSkills.code-workspace
