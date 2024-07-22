@@ -5,3 +5,5 @@ const InputSchema = new Schema<Input>({
     dateInput: { type: Date, default: Date.now },
     codAccess: { type: Types.ObjectId, ref: "Access", required: true }
 })
+
+export default model("Input", InputSchema, "Input");

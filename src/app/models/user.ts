@@ -1,7 +1,7 @@
 import Role from "./role";
 
 class User {
-    public _id?: string;
+    public _id?:any |string;
     public nameUser: string;
     public codRole: Role;
     public lastNameUser: string;

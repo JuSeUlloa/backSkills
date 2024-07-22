@@ -6,6 +6,15 @@ import connexionDB from "../connexion/connexionDB";
 
 import billRoute from '../../app/bills/route/billRoute';
 import categoryRoute from '../../app/category/route/categoryRoute';
+import accessRoute from '../../app/access/route/accessRoute';
+import registerRoute from '../../app/register/route/registerRoute';
+
+
+import roleRoute from '../../app/role/route/roleRoute';
+import userRoute from '../../app/user/route/userRoute';
+import security from "../../middleware/security";
+
+
 
 class Server {
     public app: express.Application;
@@ -31,8 +40,17 @@ class Server {
     }
 
     public routesActivate(): void {
-        this.app.use("/api/public/bill",  billRoute );
-        this.app.use("/api/public/category",  categoryRoute );
+        /* Public Routes */
+        this.app.use("/api/public/bill", billRoute);
+        this.app.use("/api/public/access", accessRoute);
+        this.app.use("/api/public/register", registerRoute);
+        this.app.use("/api/public/category", categoryRoute);
+        /* Private routes */
+
+        this.app.use("/api/private/inclock", security.verifyToken, accessRoute);
+        this.app.use("/api/public/role", roleRoute);
+        this.app.use("/api/public/user", userRoute);
+
     }
 
     public listenServer(): void {

@@ -1,5 +1,5 @@
 class Role {
-    public _id?: string;
+    public _id?: any | string;
     public nameRole?: string;
     public stateRole?: number;
     public auditLogRole?: object;

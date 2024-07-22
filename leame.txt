@@ -11,10 +11,12 @@ npm i cors
 npm i morgan
 npm i express
 npm i mongoose
+npm i bcryptjs
 
 npm i dotenv --save-dev
 npm i nodemon --save-dev
 npm i @types/cors  --save-dev
+npm i @types/bcryptjs --save-dev
 npm i @types/morgan --save-dev
 npm i @types/express --save-dev
 npm i @types/mongoose --save-dev
@@ -84,6 +86,22 @@ md src/app/bills/route
 md src/app/category/controller
 md src/app/category/dao
 md src/app/category/route
+
+md src/app/access/controller
+md src/app/access/dao
+md src/app/access/route
+
+md src/app/role/controller
+md src/app/role/dao
+md src/app/role/route
+
+md src/app/user/controller
+md src/app/user/dao
+md src/app/user/route
+
+md src/app/register/controller
+md src/app/register/dao
+md src/app/register/route
 
 # **************************************************************************
 # Crear el archivo .env en la raiz del proyecto
