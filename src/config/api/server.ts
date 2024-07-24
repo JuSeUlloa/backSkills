@@ -13,6 +13,8 @@ import registerRoute from '../../app/register/route/registerRoute';
 import roleRoute from '../../app/role/route/roleRoute';
 import userRoute from '../../app/user/route/userRoute';
 import security from "../../middleware/security";
+import typeRoute from "../../app/type/route/typeRoute";
+import serviceRoute from "../../app/service/route/serviceRoute";
 
 
 
@@ -48,8 +50,10 @@ class Server {
         /* Private routes */
 
         this.app.use("/api/private/inclock", security.verifyToken, accessRoute);
-        this.app.use("/api/public/role", roleRoute);
-        this.app.use("/api/public/user", userRoute);
+        this.app.use("/api/private/role", roleRoute);
+        this.app.use("/api/private/user", userRoute);
+        this.app.use("/api/private/type", security.verifyToken, typeRoute);
+        this.app.use("/api/private/service", security.verifyToken, serviceRoute);
 
     }
 

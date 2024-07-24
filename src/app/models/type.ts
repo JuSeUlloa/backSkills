@@ -1,4 +1,4 @@
-export class Types {
+export class Type {
     public _id?: string;
     public nameType: string;
     public descriptionType: string;
@@ -10,3 +10,5 @@ export class Types {
         this.stateType = state;
     }
 }
+
+export default Type;

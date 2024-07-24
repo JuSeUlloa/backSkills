@@ -3,7 +3,7 @@ import { Response } from "express";
 import accessSchema from "../../schemas/accessSchema";
 import userSchema from "../../schemas/userSchema";
 import inputSchema from "../../schemas/inputSchema";
-import AccessResponse from "../../schemas/accessResponse";
+import AccessResponse from "../../models/accessResponse";
 import AccessVerifyController from "../../shared/controller/accessVerifyController";
 
 class RegisterDao {

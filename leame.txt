@@ -103,6 +103,14 @@ md src/app/register/controller
 md src/app/register/dao
 md src/app/register/route
 
+md src/app/type/controller
+md src/app/type/dao
+md src/app/type/route
+
+md src/app/service/controller
+md src/app/service/dao
+md src/app/service/route
+
 # **************************************************************************
 # Crear el archivo .env en la raiz del proyecto
 # Copiar el siguiente contenido: 
