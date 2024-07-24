@@ -5,7 +5,7 @@ import nanoId from 'nanoid';
 import cript from "bcryptjs";
 import accessSchema from "../../schemas/accessSchema";
 import userSchema from "../../schemas/userSchema";
-import AccessResponse from "../../schemas/accessResponse";
+import AccessResponse from "../../models/accessResponse";
 import AccessVerifyController from "../../shared/controller/accessVerifyController";
 import inputSchema from "../../schemas/inputSchema";
 

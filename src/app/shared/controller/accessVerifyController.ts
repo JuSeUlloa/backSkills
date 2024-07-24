@@ -1,5 +1,5 @@
 import fs from 'fs';
-import AccessResponse from '../../schemas/accessResponse';
+import AccessResponse from '../../models/accessResponse';
 import pathImages from '../../../config/domain/var_images';
 import jwt from 'jsonwebtoken';
 import ManageImage from '../../../config/utilities/functions/manageImage';
